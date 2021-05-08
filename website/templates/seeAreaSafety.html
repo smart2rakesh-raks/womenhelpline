@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <center>
+
+
+        <H3>How much Areas are safe for  women</H3>
+        <h5>The Area data  is collected on the  basis of day to day reports and then  filtered to rank  different areas</h5>
+
+
+
+
+
+
+    <div id="map" style="width:100%;height:600px;"></div>
+
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: 29.0588, lng: 76.0856};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Your Approx Location'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfDF9YrGYLFRhto0ZJHJ6dL4PFCBeTnLA&callback=initMap">
+    </script>
+
+{% endblock %}

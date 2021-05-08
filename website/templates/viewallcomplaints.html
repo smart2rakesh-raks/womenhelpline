@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+
+<div class="main">
+
+<table style="width:100%" border="1">
+
+<tr><td >Complaint Againts</td><td colspan="3">Image Attachment</td><td>Complaint Title</td><td >Complaint Description</td><td>Submitted by</td><td>phone number</td></tr>
+
+
+
+<tr>
+
+
+{%  for   i in obj %}
+
+
+
+
+       <td >
+
+          <p><Strong>{{i.cpname}}</strong></p>
+</td><td>
+             <img src="http://localhost:8000/media/{{i.cimage1}}"  style="width:30px;height:40px; "></td><td>
+             <img src="http://localhost:8000/media/{{i.cimage2}}"  style="width:30px;height:40px;"></td><td>
+             <img src="http://localhost:8000/media/{{i.cimage3}}"  style="width:30px;height:40px;"></td>
+            <td><p>{{i.ctitle}}</p></td>
+		  <td><p>{{i.cdes}}</P></td>
+         <td> <p>{{i.cagainstname}}</p></td>
+         <td> <p>{{i.csubmiterphone}}</p></td>
+
+
+
+
+<tr>
+
+
+{% endfor %}
+
+</tr></table>
+
+{% endblock %}

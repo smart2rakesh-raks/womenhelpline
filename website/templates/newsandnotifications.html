@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for k in obj %}
+<center>
+	<div class="wrap-contact100">
+	<div class="row">
+  <div class="span8">
+    <div class="row">
+      <div class="span8">
+        <h3><strong>{{k.title}}</h3></a></strong>{{k.date}}
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="span6">
+        <p>
+         {{k.text}}
+        </p>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="span8">
+        <p></p>
+        <p>
+
+
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+
+</div>
+{% endfor %}
+
+{% endblock %}
